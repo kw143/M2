@@ -35,11 +35,15 @@ public class Person2 {
 		char[] newInput = input.toCharArray();
 		for (int x = 0; x < input.length(); x++) {
 			char holder = newInput[x];
-			int rand = Math.random() * (input.length()-1);
+			int rand = (int)(Math.random() * (input.length()-1));
 			newInput[x] = newInput[rand];
 			newInput[rand] = holder;
         }
-        return newInput;
+		String holder = "";
+		for(int x = 0; x<input.length();x++){
+			holder += newInput[x];
+		}
+        return holder;
 	}
 
 
