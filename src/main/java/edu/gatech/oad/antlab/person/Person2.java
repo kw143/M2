@@ -31,21 +31,17 @@ public class Person2 {
 	 */
 	private String calc(String input) {
 	  //Person 2 put your implementation here
-		ArrayList<Character> characters = new ArrayList<Character>();
-		StringBuilder output = new StringBuilder(input.length());
-
-        for (char c : input.toCharArray()) {
-            characters.add(c);
+		int[] index = new int[input.length()];
+		char[] newInput = input.toCharArray();
+		for (int x = 0; x < input.length(); x++) {
+			char holder = newInput[x];
+			int rand = Math.random() * (input.length()-1);
+			newInput[x] = newInput[rand];
+			newInput[rand] = holder;
         }
+        return newInput;
+	}
 
-
-        while (characters.size() != 0) {
-            int randPicker = (int)(Math.random() * characters.size());
-            output.append(characters.remove(randPicker));
-        }
-
-        return output.toString();
-    }
 
 	/**
 	 * Return a string rep of this object
