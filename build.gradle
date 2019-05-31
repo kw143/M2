@@ -3,16 +3,8 @@ defaultTasks 'jar'
 apply plugin: 'java'
 
 dependencies {
-    compile files('src/main/java/*')
+    //compile files('src/main/java/*')
     compile files('lib/resources.jar')
-}
-
-sourceSets {
-    main {
-        java {
-            srcDirs = ['src']
-        }
-    }
 }
 
 
