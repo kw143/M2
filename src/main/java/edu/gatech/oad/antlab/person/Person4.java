@@ -33,7 +33,7 @@ public class Person4 {
       //Person 4 put your implementation here
       String holder = "";
     	for(int x = 0; x < input.length(); x++){
-    	  holder += input.charAt(x)++;
+    	  holder += input.charAt(x)+1;
         }
     	return holder;
     }
