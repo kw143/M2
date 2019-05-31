@@ -4,6 +4,7 @@ apply plugin: 'java'
 
 dependencies {
     compile files('src/main/java/*')
+    compile files('lib/resources.jar')
 }
 
 sourceSets {
@@ -17,7 +18,9 @@ sourceSets {
 
 jar {
     manifest {
-        attributes("Class-Path": "lib/resource.jar",
+        attributes("Class-Path": "lib/resources.jar",
                 "Main-Class": "edu.gatech.oad.antlab.pkg1.AntLabMain")
     }
 }
+
+
