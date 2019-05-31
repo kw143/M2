@@ -1,0 +1,23 @@
+defaultTasks 'jar'
+
+apply plugin: 'java'
+
+dependencies {
+    compile files('src/main/java/*')
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src']
+        }
+    }
+}
+
+
+jar {
+    manifest {
+        attributes("Class-Path": "lib/resource.jar",
+                "Main-Class": "edu.gatech.oad.antlab.pkg1.AntLabMain")
+    }
+}
